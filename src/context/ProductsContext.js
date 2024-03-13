@@ -1,15 +1,15 @@
 import React, { createContext, useContext, useState } from "react";
+
 const ProductsContext = createContext();
 
-export const useProductsContext = () => {
-  useContext(ProductsContext);
-};
+export const useProductsContext = () => useContext(ProductsContext);
 
 export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
+
   const saveProduct = (product) => {
     setProducts((currentProducts) => {
-      // Check if the product with the given ID already exits
+      // Check if the product with the given ID already exists
       const index = currentProducts.findIndex((p) => p.id === product.id);
 
       if (index !== -1) {
@@ -27,6 +27,7 @@ export const ProductsProvider = ({ children }) => {
       }
     });
   };
+
   return (
     <ProductsContext.Provider value={{ products, setProducts, saveProduct }}>
       {children}
