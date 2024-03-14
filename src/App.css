@@ -23,7 +23,8 @@
   transition: color 0.2s; /* Smooth transition for color change */
 }
 
-.nav-link:hover, .nav-link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: #cccccc; /* Lighter color on hover */
   text-decoration: none; /* Optional: removes underline on hover */
 }
@@ -46,5 +47,3 @@
 .hover-highlight:hover {
   background-color: #f8f9fa !important; /* Light grey background on hover */
 }
-
-
